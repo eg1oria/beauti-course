@@ -1,0 +1,41 @@
+.container {
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 2px solid rgba(140, 123, 75, 0.3);
+  padding: 5px 0;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &_navList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 24px;
+
+    &_social {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+
+  &_nav {
+    display: flex;
+    gap: 20px;
+  }
+}
