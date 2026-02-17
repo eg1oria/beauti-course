@@ -1,0 +1,164 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 0;
+  position: relative;
+
+  &_flower {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+
+  &_flower2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &_title {
+    font-size: 55px;
+    color: #373740;
+    letter-spacing: 0.02em;
+    font-family: 'Cormorant Garamond', serif;
+
+    line-height: 0.87;
+  }
+
+  &_description {
+    font-size: 24px;
+    color: #555555;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  &_step {
+    font-size: 28px;
+    color: #00000079;
+    border-radius: 68px;
+    background:
+      linear-gradient(rgba(217, 217, 217, 0.01), rgba(217, 217, 217, 0.01)),
+      rgba(236, 224, 220, 0.816);
+    box-shadow: 0px 1px 10px 1px rgba(34, 60, 80, 0.2);
+
+    width: 700px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  &_form {
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+    max-width: 940px;
+    width: 100%;
+    &_group {
+      background:
+        linear-gradient(rgba(217, 217, 217, 0.01), rgba(217, 217, 217, 0.01)),
+        rgba(236, 224, 220, 0.6);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      border: 1px solid #b6b6b69e;
+      border-radius: 12px;
+      padding: 23px;
+
+      &_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      &_price {
+        font-size: 96px;
+        color: #000;
+        letter-spacing: 0.02em;
+        line-height: 0.87;
+        font-family: 'Cormorant Garamond', serif;
+        text-align: center;
+      }
+
+      &_agreement {
+        display: flex;
+        text-align: center;
+        font-size: 20px;
+        color: #555555;
+      }
+
+      &_button {
+        padding: 5px;
+        font-size: 32px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+
+        color: #fff;
+        cursor: pointer;
+
+        background: linear-gradient(120deg, #b39165 0%, #e6c493 50%, #d7b27c 100%);
+        border-radius: 30px;
+        margin: 0 auto;
+        margin-top: 10px;
+        box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+      }
+      &_label {
+        font-size: 24px;
+        color: #555555;
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+        font-weight: 400;
+      }
+
+      &_access {
+        font-size: 20px;
+        color: #6b5e5d;
+        margin-top: 80px;
+        text-align: center;
+      }
+
+      &_input {
+        padding: 8px 12px;
+        background-color: #eaeaea;
+        border-radius: 12px;
+        border: 1px solid #e0d3ce;
+        font-size: 24px;
+        width: 100%;
+        outline: none;
+
+        transition:
+          border-color 200ms ease,
+          box-shadow 200ms ease,
+          background-color 200ms ease,
+          transform 120ms ease;
+
+        &::placeholder {
+          color: rgba(55, 55, 64, 0.45);
+        }
+
+        &:hover {
+          border-color: rgba(185, 143, 107, 0.45);
+          background-color: #f1f1f1;
+        }
+
+        &:focus,
+        &:focus-visible {
+          border-color: rgba(185, 143, 107, 0.75); // акцент под твой #b98f6b
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}

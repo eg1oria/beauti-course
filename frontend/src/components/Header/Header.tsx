@@ -15,10 +15,10 @@ export default function Header() {
               <a href="#program">О курсе</a>
             </li>
             <li className={s.navItem}>
-              <Link href="/about">Обо мне</Link>
+              <a href="#">Обо мне</a>
             </li>
             <li className={s.navItem}>
-              <Link href="/contact">Программа</Link>
+              <a href="#howGo">Программа</a>
             </li>
           </ul>
         </nav>
@@ -26,25 +26,25 @@ export default function Header() {
         <nav className={s.header_nav}>
           <ul className={s.header_navList}>
             <li className={s.navItem}>
-              <Link href="/contact">Сертификаты</Link>
+              <Link href="#">Сертификаты</Link>
             </li>
             <li className={s.navItem}>
-              <Link href="/contact">Контакты</Link>
+              <Link href="#footer">Контакты</Link>
             </li>
           </ul>
           <ul className={s.header_navList_social}>
             <li className={s.navItem}>
-              <Link href="/contact">
+              <Link href="#">
                 <FaWhatsapp size={20} />
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href="/contact">
+              <Link href="#">
                 <AiFillInstagram size={20} />
               </Link>
             </li>
             <li className={s.navItem}>
-              <Link href="/contact">
+              <Link href="#">
                 <MdAlternateEmail size={20} />
               </Link>
             </li>

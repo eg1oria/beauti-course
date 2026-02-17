@@ -41,7 +41,9 @@
     &_item {
       display: flex;
       flex-direction: column;
-      background-color: #ece0dc;
+      background:
+        linear-gradient(rgba(217, 217, 217, 0.01), rgba(217, 217, 217, 0.01)),
+        rgba(236, 224, 220, 0.6);
       border-radius: 12px;
       border: 1px solid #b6b6b69e;
       padding: 23px 23px 40px 23px;

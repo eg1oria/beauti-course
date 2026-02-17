@@ -9,11 +9,14 @@ export default function Intro() {
         alt="Intro Image"
         width={730}
         height={730}
+        priority
         className={s.intro_image}
+        sizes="(max-width: 768px) 412px, 730px"
       />
       <Image
         src="/flower.webp"
         alt="Intro Image"
+        sizes="(max-width: 768px) 412px, 1050px"
         width={1050}
         height={700}
         className={s.intro_image_flower}

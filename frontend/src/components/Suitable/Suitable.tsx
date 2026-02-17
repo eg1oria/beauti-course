@@ -3,10 +3,11 @@ import s from './Suitable.module.scss';
 
 export const Suitable = () => {
   return (
-    <div className={s.suitable}>
+    <div className={s.suitable} id="situable">
       <Image
         src="/flower.webp"
         alt="Mastering Background"
+        sizes="(max-width: 768px) 412px, 1050px"
         width={1050}
         height={700}
         className={s.suitable_flower}
