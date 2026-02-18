@@ -1,5 +1,4 @@
-@import '../../styles/mixins.scss';
-
+@use '../../styles/mixins' as *;
 .mastering {
   display: flex;
   flex-direction: column;
@@ -50,7 +49,9 @@
     }
 
     @include vp-767 {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(4, minmax(300px, 1fr));
+      overflow-x: auto;
+      margin: 0 -10px;
     }
 
     &_item {

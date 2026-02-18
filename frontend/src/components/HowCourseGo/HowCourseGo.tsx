@@ -5,7 +5,7 @@ import FlowerDecor from '../Flower/Flower';
 export const HowCourseGo = () => {
   return (
     <section className={s.howCourseGo} id="howGo">
-      <FlowerDecor position="left" />
+      <FlowerDecor position="left" bottom="-100px" />
       <Image
         src="/line.svg"
         alt="Mastering Background"

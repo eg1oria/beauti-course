@@ -1,3 +1,5 @@
+@use '../../styles/mixins.scss' as *;
+
 .need {
   display: flex;
   flex-direction: column;
@@ -6,13 +8,6 @@
   padding: clamp(15px, 2.08vw, 30px) 0;
 
   &_flower {
-    position: absolute;
-    right: 0;
-    user-select: none;
-    pointer-events: none;
-    width: clamp(400px, 72.9vw, 1050px);
-    height: auto;
-    bottom: -10.9vw;
     z-index: -1;
   }
 
@@ -40,6 +35,11 @@
     display: flex;
     gap: clamp(3px, 0.35vw, 5px);
     flex-direction: column;
+
+    @include vp-767 {
+      gap: 10px;
+      align-items: center;
+    }
 
     &_item {
       display: flex;

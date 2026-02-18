@@ -14,7 +14,7 @@ export default function Intro() {
           priority
           className={s.intro_images_woman}
         />
-        <FlowerDecor className={s.intro_images_flower} />
+        <FlowerDecor bottom="-20vw" />
       </div>
       <div className="container">
         <div className={s.intro_content}>

@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins' as *;
 
 .footer {
   box-shadow: 0px 9px 8px -6px rgba(34, 60, 80, 0.2) inset;

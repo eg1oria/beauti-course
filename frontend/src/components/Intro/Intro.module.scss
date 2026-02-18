@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins' as *;
 
 .intro {
   background-image: url('/background.webp');
@@ -28,15 +28,6 @@
       filter: drop-shadow(-7px -5px 8px rgba(34, 60, 80, 0.3));
       pointer-events: none;
       user-select: none;
-    }
-
-    &_flower {
-      position: absolute;
-      bottom: -10.9vw;
-      right: 0;
-      width: clamp(700px, 85vw, 1450px);
-      height: auto;
-      pointer-events: none;
     }
   }
 

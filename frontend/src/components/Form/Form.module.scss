@@ -1,31 +1,12 @@
+@use '../../styles/mixins.scss' as *;
+
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: clamp(10px, 1.39vw, 20px);
-  padding: clamp(50px, 6.94vw, 100px) 0;
+  padding: clamp(50px, 6.94vw, 100px) clamp(30px, 4.17vw, 60px);
   position: relative;
-
-  &_flower {
-    position: absolute;
-    left: 0;
-    transform: scaleX(-1);
-    z-index: -1;
-    pointer-events: none;
-    bottom: 0;
-    width: clamp(400px, 72.9vw, 1050px);
-    height: auto;
-  }
-
-  &_flower2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    pointer-events: none;
-    width: clamp(400px, 72.9vw, 1050px);
-    height: auto;
-  }
 
   &_title {
     font-size: clamp(30px, 3.82vw, 55px);
@@ -33,6 +14,10 @@
     letter-spacing: 0.02em;
     font-family: 'Cormorant Garamond', serif;
     line-height: 0.87;
+
+    @include vp-767 {
+      text-align: center;
+    }
   }
 
   &_description {
@@ -59,6 +44,10 @@
     justify-content: center;
     align-items: center;
     font-weight: 600;
+
+    @include vp-767 {
+      width: 100%;
+    }
   }
 
   &_form {
@@ -177,4 +166,19 @@
   color: #e53e3e;
   font-size: 12px;
   margin-top: 4px;
+}
+
+.flower {
+  bottom: 0;
+
+  @include vp-767 {
+    bottom: -5vw;
+  }
+}
+
+.flower1 {
+  bottom: 0;
+  @include vp-767 {
+    bottom: -5vw;
+  }
 }

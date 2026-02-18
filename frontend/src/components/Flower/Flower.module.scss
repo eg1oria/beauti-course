@@ -2,6 +2,9 @@
   position: absolute;
   pointer-events: none;
   user-select: none;
+  bottom: var(--flower-bottom, 0);
+  width: var(--flower-w, clamp(220px, 30vw, 520px)) !important;
+  height: auto !important;
 
   &__right {
     right: 0;
@@ -11,4 +14,10 @@
     left: 0;
     transform: scaleX(-1);
   }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
 }

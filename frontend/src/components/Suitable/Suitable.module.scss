@@ -1,9 +1,15 @@
+@use '../../styles/mixins.scss' as *;
+
 .suitable {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: clamp(25px, 3.47vw, 50px) 20px;
   position: relative;
+
+  @include vp-767 {
+    padding: clamp(25px, 3.47vw, 50px) 10px;
+  }
 
   &_flower {
     position: absolute;
@@ -22,6 +28,10 @@
     font-family: 'Cormorant Garamond', serif;
     margin-bottom: clamp(10px, 1.39vw, 20px);
     line-height: 0.87;
+
+    @include vp-767 {
+      text-align: center;
+    }
   }
 
   &_description {
@@ -39,7 +49,13 @@
     display: flex;
     gap: clamp(12px, 1.74vw, 25px);
     justify-content: center;
-    margin-top: clamp(10px, 1.39vw, 20px);
+    margin-top: 20px;
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
 
     &_item {
       display: flex;

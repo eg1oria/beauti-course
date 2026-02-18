@@ -93,8 +93,8 @@ export const Form = () => {
 
   return (
     <div className={s.form} id="form">
-      <FlowerDecor position="left" />
-      <FlowerDecor position="right" />
+      <FlowerDecor position="left" width="clamp(150px, 20vw, 1050px)" className={s.flower} />
+      <FlowerDecor position="right" width="clamp(150px, 20vw, 1050px)" className={s.flower1} />
 
       <span className={s.form_step}>Остался 1 шаг до доступа</span>
       <h2 className={s.form_title}>Заполните данные для участия в курсе</h2>

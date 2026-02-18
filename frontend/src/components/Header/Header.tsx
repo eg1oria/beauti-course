@@ -17,7 +17,6 @@ export default function Header() {
   return (
     <header className={s.header}>
       <div className={s.container}>
-        {/* Левая часть (Десктоп) */}
         <nav className={s.header_desktopNav}>
           <ul className={s.header_navList}>
             <li className={s.navItem}>
@@ -34,7 +33,6 @@ export default function Header() {
 
         <Image src="/logo.png" alt="Logo" width={78} height={70} className={s.logo} />
 
-        {/* Правая часть (Десктоп) */}
         <nav className={s.header_desktopNav}>
           <div className={s.header_nav}>
             <ul className={s.header_navList}>
@@ -65,7 +63,6 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Бургер (Появляется на vp-1023) */}
         <button
           className={`${s.burger} ${isOpen ? s.burger__open : ''}`}
           onClick={toggleMenu}
@@ -76,7 +73,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Мобильное меню (Все ссылки здесь) */}
       <div className={`${s.mobileMenu} ${isOpen ? s.mobileMenu__open : ''}`}>
         <ul className={s.mobileMenu_list}>
           <li onClick={closeMenu}>
