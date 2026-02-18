@@ -43,7 +43,7 @@ export const Join = () => {
           <p className={s.join_card_note}>
             Доступ сразу после оплаты · Без подписки и скрытых платежей
           </p>
-          <a href="#" className={s.join_card_button}>
+          <a href="#form" className={s.join_card_button}>
             Записаться на курс
           </a>
         </div>

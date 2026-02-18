@@ -3,44 +3,48 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 30px 0;
+  padding: clamp(15px, 2.08vw, 30px) 0;
 
   &_flower {
     position: absolute;
-    bottom: -150px;
     right: 0;
+    user-select: none;
+    pointer-events: none;
+    width: clamp(400px, 72.9vw, 1050px);
+    height: auto;
+    bottom: -10.9vw;
+    z-index: -1;
   }
 
   &_title {
-    font-size: 75px;
+    font-size: clamp(40px, 5.2vw, 75px);
     color: #373740;
     letter-spacing: 0.02em;
     font-family: 'Cormorant Garamond', serif;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 1.39vw, 20px);
     line-height: 0.87;
   }
 
   &_description {
-    font-size: 32px;
+    font-size: clamp(18px, 2.22vw, 32px);
     color: #555555;
     line-height: 1.6;
-    max-width: 700px;
+    max-width: clamp(400px, 48.6vw, 700px);
     text-align: center;
-    margin: 0;
+    margin: 0 0 clamp(8px, 1.04vw, 15px);
     padding: 0;
     letter-spacing: 0.09em;
-    margin-bottom: 15px;
   }
 
   &_list {
     display: flex;
-    gap: 5px;
+    gap: clamp(3px, 0.35vw, 5px);
     flex-direction: column;
 
     &_item {
       display: flex;
-      gap: 5px;
-      font-size: 24px;
+      gap: clamp(3px, 0.35vw, 5px);
+      font-size: clamp(15px, 1.67vw, 24px);
       align-items: center;
     }
   }

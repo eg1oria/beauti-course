@@ -1,8 +1,9 @@
+@import '../../styles/mixins.scss';
 .howCourseGo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 20px;
+  padding: clamp(40px, 5.56vw, 80px) 20px;
   position: relative;
 
   &_line {
@@ -10,41 +11,53 @@
     bottom: 40%;
     left: 50%;
     transform: translate(-50%, 50%);
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   &_flower {
     position: absolute;
-    bottom: -150px;
+    bottom: -10.9vw;
     left: 0;
     transform: scaleX(-1);
+    user-select: none;
+    pointer-events: none;
+    width: clamp(400px, 72.9vw, 1050px);
+    height: auto;
   }
 
   &_title {
-    font-size: 75px;
+    font-size: clamp(40px, 5.2vw, 75px);
     color: #373740;
     letter-spacing: 0.02em;
     font-family: 'Cormorant Garamond', serif;
-
     line-height: 0.87;
   }
 
   &_description {
-    font-size: 32px;
+    font-size: clamp(18px, 2.22vw, 32px);
     color: #555555;
     line-height: 1.6;
-    max-width: 700px;
+    max-width: clamp(400px, 48.6vw, 700px);
     text-align: center;
-    margin: 0;
+    margin: 0 0 clamp(8px, 1.04vw, 15px);
     padding: 0;
     letter-spacing: 0.09em;
-    margin-bottom: 15px;
   }
 
   &_list {
     display: flex;
-    gap: 25px;
+    gap: clamp(12px, 1.74vw, 25px);
     justify-content: center;
-    margin-top: 30px;
+    margin-top: clamp(16px, 2.08vw, 30px);
+
+    @include vp-1023 {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
 
     &_item {
       display: flex;
@@ -54,27 +67,34 @@
         rgba(236, 224, 220, 0.6);
       border-radius: 12px;
       border: 1px solid #b6b6b69e;
-      padding: 120px 10px 40px 10px;
-      align-items: flex-start;
+      padding: clamp(60px, 8.33vw, 120px) clamp(6px, 0.69vw, 10px) clamp(20px, 2.78vw, 40px);
       position: relative;
       width: 100%;
       text-align: center;
-      height: 540px;
+      height: clamp(300px, 37.5vw, 540px);
       align-items: center;
+
+      @include vp-1023 {
+        height: auto;
+      }
 
       &_descriptions {
         display: flex;
         flex-direction: column;
         gap: 5px;
         margin-top: auto;
+
+        @include vp-1023 {
+          margin-top: 10px;
+        }
       }
 
       &_title {
-        font-size: 48px;
+        font-size: clamp(28px, 3.33vw, 48px);
         color: #000;
         letter-spacing: 0.02em;
         font-family: 'Cormorant Garamond', serif;
-        margin-bottom: 100px;
+        margin-bottom: clamp(50px, 6.94vw, 100px);
         line-height: 0.87;
         display: flex;
         text-align: center;
@@ -83,28 +103,27 @@
       &_description {
         display: flex;
         align-items: flex-start;
-        font-size: 22px;
+        font-size: clamp(14px, 1.53vw, 22px);
         color: #555555;
         line-height: 1.6;
-        margin: 0;
+        margin: 0 0 clamp(8px, 1.04vw, 15px);
         padding: 0;
-        margin-bottom: 15px;
         text-align: left;
         gap: 5px;
       }
 
       &_tag {
         position: absolute;
-        font-size: 75px;
+        font-size: clamp(40px, 5.2vw, 75px);
         color: #b98f6b;
-        top: -50px;
+        top: clamp(-30px, -3.47vw, -50px);
         left: 50%;
         transform: translateX(-50%);
         border-radius: 12px;
         background: #eaeaea;
         border: 1px solid #b6b6b69e;
         font-family: 'Cormorant Garamond', serif;
-        padding: 20px;
+        padding: clamp(10px, 1.39vw, 20px);
         display: flex;
         justify-content: center;
         letter-spacing: 0.02em;
@@ -114,16 +133,29 @@
     }
 
     &_item:nth-child(1) {
-      margin-top: 100px;
+      margin-top: clamp(50px, 6.94vw, 100px);
+
+      @include vp-1023 {
+        margin-top: 0;
+      }
     }
     &_item:nth-child(2) {
-      margin-top: 55px;
+      margin-top: clamp(28px, 3.82vw, 55px);
+      @include vp-1023 {
+        margin-top: 0;
+      }
     }
     &_item:nth-child(3) {
-      margin-top: 10px;
+      margin-top: clamp(5px, 0.69vw, 10px);
+      @include vp-1023 {
+        margin-top: 0;
+      }
     }
     &_item:nth-child(4) {
-      margin-top: -40px;
+      margin-top: clamp(-40px, -2.78vw, -20px);
+      @include vp-1023 {
+        margin-top: 0;
+      }
     }
   }
 }

@@ -1,0 +1,14 @@
+.flower {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+
+  &__right {
+    right: 0;
+  }
+
+  &__left {
+    left: 0;
+    transform: scaleX(-1);
+  }
+}

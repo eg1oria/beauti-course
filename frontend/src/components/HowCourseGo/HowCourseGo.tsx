@@ -1,17 +1,11 @@
 import Image from 'next/image';
 import s from './HowCourseGo.module.scss';
+import FlowerDecor from '../Flower/Flower';
 
 export const HowCourseGo = () => {
   return (
     <section className={s.howCourseGo} id="howGo">
-      <Image
-        src="/flower.webp"
-        alt="Mastering Background"
-        width={1050}
-        height={700}
-        className={s.howCourseGo_flower}
-        sizes="(max-width: 768px) 412px, 1050px"
-      />
+      <FlowerDecor position="left" />
       <Image
         src="/line.svg"
         alt="Mastering Background"

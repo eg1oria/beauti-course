@@ -1,17 +1,11 @@
 import Image from 'next/image';
 import s from './Suitable.module.scss';
+import FlowerDecor from '../Flower/Flower';
 
 export const Suitable = () => {
   return (
     <div className={s.suitable} id="situable">
-      <Image
-        src="/flower.webp"
-        alt="Mastering Background"
-        sizes="(max-width: 768px) 412px, 1050px"
-        width={1050}
-        height={700}
-        className={s.suitable_flower}
-      />
+      <FlowerDecor position="right" className={s.suitable_flower} />
       <h2 className={s.suitable_title}>Кому подойдет этот курс?</h2>
       <p className={s.suitable_description}>
         Если вы хотите работать аккуратно, системно и без переделок

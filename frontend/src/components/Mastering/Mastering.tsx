@@ -1,17 +1,11 @@
 import Image from 'next/image';
 import s from './Mestering.module.scss';
+import FlowerDecor from '../Flower/Flower';
 
 export default function Mastering() {
   return (
     <div className={s.mastering} id="program">
-      <Image
-        src="/flower.webp"
-        alt="Mastering Background"
-        sizes="(max-width: 768px) 412px, 1050px"
-        width={1050}
-        height={700}
-        className={s.mastering_flower}
-      />
+      <FlowerDecor position="left" className={s.mastering_flower} />
       <h1 className={s.mastering_title}>Что вы освоите на курсе</h1>
       <p className={s.mastering_description}>
         Системный подход к верхним формам и архитектуре ногтей без лишнего опила.

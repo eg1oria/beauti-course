@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .intro {
   background-image: url('/background.webp');
   background-repeat: no-repeat;
@@ -5,16 +7,36 @@
   background-size: cover;
   position: relative;
 
-  &_image {
+  &_images {
     position: absolute;
     bottom: 0;
     right: 0;
-    filter: drop-shadow(-7px -5px 8px rgba(34, 60, 80, 0.3));
+    width: clamp(400px, 50.7vw, 730px);
+
+    @include vp-1440 {
+      width: clamp(320px, 44vw, 640px);
+    }
+
+    @include vp-1023 {
+      width: clamp(120px, 44vw, 540px);
+    }
+
+    &_woman {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(-7px -5px 8px rgba(34, 60, 80, 0.3));
+      pointer-events: none;
+      user-select: none;
+    }
 
     &_flower {
       position: absolute;
-      bottom: -200px;
+      bottom: -10.9vw;
       right: 0;
+      width: clamp(700px, 85vw, 1450px);
+      height: auto;
+      pointer-events: none;
     }
   }
 
@@ -26,54 +48,61 @@
     text-align: left;
     padding: 190px 0 128px 0;
     gap: 20px;
+
+    @include vp-767 {
+      align-items: center;
+      text-align: center;
+      padding: 80px 10px 100px 10px;
+    }
   }
 
   &_subtitle {
-    font-size: 36px;
+    font-size: clamp(20px, 2.5vw, 36px);
     color: #373740;
     letter-spacing: 0.3em;
     font-family: 'Cormorant Garamond', serif;
   }
 
   &_title {
-    font-size: 96px;
+    font-size: clamp(48px, 6.67vw, 96px);
     color: #000;
     font-family: 'Cormorant Garamond', serif;
-    max-width: 820px;
+    max-width: clamp(440px, 56.9vw, 820px);
     line-height: 0.87;
     letter-spacing: 0.02em;
-    margin-bottom: 60px;
+    margin-bottom: clamp(30px, 4.17vw, 60px);
   }
 
   &_description {
-    font-size: 22px;
+    font-size: clamp(14px, 1.53vw, 22px);
     color: #32323b;
-    max-width: 540px;
-    line-height: 1.5;
+    max-width: clamp(300px, 37.5vw, 540px);
     font-family: 'Cormorant Garamond', serif;
-    margin: 0;
+    margin: 0 0 clamp(16px, 2.22vw, 32px);
     padding: 0;
     line-height: 1.39;
     letter-spacing: 0.03em;
-    margin-bottom: 32px;
   }
 
   &_buttons {
     display: flex;
-    gap: 23px;
+    gap: clamp(12px, 1.6vw, 23px);
+    @include vp-767 {
+      flex-direction: column;
+      width: 100%;
+    }
 
     &_button {
-      padding: 10px;
-      font-size: 18px;
-      width: 340px;
+      padding: clamp(8px, 0.7vw, 10px);
+      font-size: clamp(14px, 1.25vw, 18px);
+      width: clamp(200px, 23.6vw, 340px);
       display: flex;
       justify-content: center;
-
       color: #000;
       cursor: pointer;
-
       border-radius: 30px;
       border: 2px solid #ddb688;
+      text-decoration: none;
     }
 
     &_button_primary {

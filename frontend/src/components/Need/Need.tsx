@@ -1,17 +1,11 @@
 import Image from 'next/image';
 import s from './Need.module.scss';
+import FlowerDecor from '../Flower/Flower';
 
 export default function Need() {
   return (
     <div className={s.need}>
-      <Image
-        src="/flower.webp"
-        alt="Mastering Background"
-        width={1050}
-        sizes="(max-width: 768px) 412px, 1050px"
-        height={700}
-        className={s.need_flower}
-      />
+      <FlowerDecor position="right" className={s.need_flower} />
       <h2 className={s.need_title}>Что входит в курс</h2>
       <p className={s.need_description}>
         Всё необходимое для стабильного, чистого и предсказуемого результата.
