@@ -22,6 +22,10 @@ async function bootstrap() {
     }),
   );
 
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+
+  console.log('Token:', token);
+
   app.setGlobalPrefix('api');
 
   await app.listen(process.env.PORT || 5000, '0.0.0.0');
