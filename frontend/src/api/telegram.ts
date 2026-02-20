@@ -4,9 +4,9 @@ export interface ITelegramForm {
   phone: string;
 }
 
-export const sendToTelegram = async (formData: ITelegramForm) => {
-  const BASE_URL = process.env.API_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
+export const sendToTelegram = async (formData: ITelegramForm) => {
   try {
     const response = await fetch(`${BASE_URL}/telegram/send`, {
       method: 'POST',
