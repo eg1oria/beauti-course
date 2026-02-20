@@ -10,15 +10,30 @@ export class TelegramService {
 
   constructor(private readonly httpService: HttpService) {}
 
+  private sanitize(str: string): string {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;')
+      .trim()
+      .slice(0, 500);
+  }
+
   async sendMessage(dto: CreateLeadDto) {
+    const name = this.sanitize(dto.name);
+    const telegram = this.sanitize(dto.telegram);
+    const phone = this.sanitize(dto.phone);
+
     const message = `
 <b>🔥 Новая заявка с сайта!</b>
 
-<b>Имя:</b> ${dto.name}
+<b>Имя:</b> ${name}
 
-<b>Telegram:</b> ${dto.telegram}
+<b>Telegram:</b> ${telegram}
 
-<b>Телефон:</b> ${dto.phone}
+<b>Телефон:</b> ${phone}
     `;
 
     const url = `https://api.telegram.org/bot${this.botToken}/sendMessage`;
